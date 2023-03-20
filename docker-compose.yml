@@ -26,11 +26,11 @@ services:
     image: user:v1
     container_name: user
     depends_on:
-      - radis
+      - redis
       - mongodb
-  radis:
-    image: radis
-    container_name: radis
+  redis:
+    image: redis
+    container_name: redis
   mysql:
     image: mysql:v1
     container_name: data container
@@ -43,7 +43,7 @@ services:
     image: cart:v1
     container_name: cart
     depends_on:
-      - radis
+      - redis
       - catalogue
       
      
