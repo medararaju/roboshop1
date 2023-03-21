@@ -4,8 +4,8 @@ networks:
     driver: bridge
 services:
   web:
-    image: nginx
-    container_name: web:v1
+    image: web:v1
+    container_name: web
     ports:
     - 80:80
     depends_on:
